@@ -20,7 +20,7 @@ video {
 }
 .container {
   background: white;
-  background-image: url(./assets/buddhist-sculpture-tranquil-scene-ancient-architecture-meditation-generative-ai_188544-12807.avif);
+  background-image: url(./assets/img/buddhist-sculpture-tranquil-scene-ancient-architecture-meditation-generative-ai_188544-12807.avif);
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 10px;
@@ -142,10 +142,10 @@ h1 {
 }
 .topic {
   transition: transform 0.3s, box-shadow 0.3s;
-  width: 100px; /* Adjust width for better visibility */
-  height: 100px;
+  width: 200px; /* Adjust width for better visibility */
+  height: 200px;
   margin: 10px;
-  display: flex;
+  display: inline-block;
   align-items: center;
   justify-content: center;
   background-size: cover;
@@ -160,84 +160,77 @@ h1 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.topic {
-  width: 50px;
-  height: 100px;
-  margin: 10px;
-  display: inline-block;
-}
-
 .topic1 {
-  background-image: url(./assets/reduce-stress.jpg);
+  background-image: url(./assets/img/istockphoto-1470006517-612x612.jpg);
   border: 1px solid;
 }
 
 .topic2 {
-  background-image: url(./assets/reduce-anxiety.jpg);
+  background-image: url(./assets/img/anxiety.webp);
 }
 
 .topic3 {
-  background-image: url(./assets/mindfulness.jpg);
+  background-image: url(./assets/img/Mindfulness.avif);
 }
 
 .topic4 {
-  background-image: url(./assets/deep-breathing.jpg);
+  background-image: url(./assets/img/Deep\ breathing.webp);
 }
 
 .topic5 {
-  background-image: url(./assets/guided-meditation.jpg);
+  background-image: url(./assets/img/Guided\ meditation.jpg);
 }
 
 .topic6 {
-  background-image: url(./assets/mantra-meditation.jpg);
+  background-image: url(./assets/img/Mantra\ meditation.jpg);
 }
 
 .topic7 {
-  background-image: url(./assets/body-scan-meditation.jpg);
+  background-image: url(./assets/img/Body\ scan\ meditation.gif);
 }
 
 .topic8 {
-  background-image: url(./assets/breath-meditation.jpg);
+  background-image: url(./assets/img/Breath\ meditation.jpg);
 }
 
 .topic9 {
-  background-image: url(./assets/progressive-muscle-relaxation.jpg);
+  background-image: url(./assets/img/Progressive\ muscle\ relaxation.jpg);
 }
 
 .topic10 {
-  background-image: url(./assets/yoga.jpg);
+  background-image: url(./assets/img/Yoga.avif);
 }
 
 .topic11 {
-  background-image: url(./assets/improved-memory.jpg);
+  background-image: url(./assets/img/Improved\ memory.png);
 }
 
 .topic12 {
-  background-image: url(./assets/increased-attention.jpg);
+  background-image: url(./assets/img/Increased\ attention.webp);
 }
 
 .topic13 {
-  background-image: url(./assets/better-sleep.jpg);
+  background-image: url(./assets/img/Better\ sleep.avif);
 }
 
 .topic14 {
-  background-image: url(./assets/less-pain.jpg);
+  background-image: url(./assets/img/Less\ pain.jpg);
 }
 
 .topic15 {
-  background-image: url(./assets/lower-blood-pressure.jpg);
+  background-image: url(./assets/img/Lower\ blood\ pressure.webp);
 }
 
 .topic16 {
-  background-image: url(./assets/less-anxiety.jpg);
+  background-image: url(./assets/img/Less\ anxiety.jpg);
 }
 
 .topic17 {
-  background-image: url(./assets/less-depression.jpg);
+  background-image: url(./assets/img/Less\ depression.avif);
 }
 
 .topic18 {
-  background-image: url(./assets/greater-compassion.jpg);
+  background-image: url(./assets/img/Greater\ compassion.jpg);
 }
 
 

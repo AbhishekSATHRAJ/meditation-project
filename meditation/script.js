@@ -56,7 +56,7 @@ function Login(event) {
     contianer.style.display = "none";
 
     const audio1 = new Audio(
-      "./assets/WhatsApp Audio 2024-10-07 at 22.09.39_8ee27a3d.mp3"
+      "./assets/audio/WhatsApp Audio 2024-10-07 at 22.09.39_8ee27a3d.mp3"
     );
     audio1.play();
   } else {
@@ -75,11 +75,11 @@ function user_name() {
   }
 }
 // get started function //
-// function Get_started(event){
-//     event.preventDefault();
-//     // const getstartedpage = document.querySelector(".getstarted");
-//     // getstartedpage.style.display = "none";
-//     const choose_topic=document.querySelector('.choose_topic');
-//     choose_topic.style.display="block";
+function Get_started(event){
+    event.preventDefault();
+    const getstartedpage = document.querySelector(".getstarted");
+    getstartedpage.style.display = "none";
+    const choose_topic=document.querySelector('.choose_topic');
+    choose_topic.style.display="block";
 
-// }
+}
