@@ -1,0 +1,243 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f9c2d3, #c1e1c1);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  z-index: -1;
+}
+.container {
+  background: white;
+  background-image: url(./assets/buddhist-sculpture-tranquil-scene-ancient-architecture-meditation-generative-ai_188544-12807.avif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.tab {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tablink {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.tablink:hover {
+  background-color: #ddd;
+}
+
+.tablink.active {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.tabcontent {
+  display: none;
+  margin-top: 20px;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: #ff69b4;
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+button:focus {
+  outline: 2px solid #ff69b4;
+}
+
+/* get started */
+.getstarted {
+  background-color: #f7f7f7;
+
+  padding: 20px;
+
+  text-align: center;
+  display: none;
+}
+
+.med {
+  border-radius: 10px;
+
+  background-color: #fff;
+
+  padding: 20px;
+}
+
+h1 {
+  /* Use a calming font and color */
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.getstarted button {
+  background-color: #ff69b4;
+}
+
+.getstarted button:hover {
+  background-color: #ff1493;
+}
+
+/* choose_topics */
+
+.choose_topic {
+  display: none;
+}
+.choose_topics ul {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+.topic {
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100px; /* Adjust width for better visibility */
+  height: 100px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  border-radius: 5px;
+  color: white; /* Ensure text is readable */
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.topic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.topic {
+  width: 50px;
+  height: 100px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.topic1 {
+  background-image: url(./assets/reduce-stress.jpg);
+  border: 1px solid;
+}
+
+.topic2 {
+  background-image: url(./assets/reduce-anxiety.jpg);
+}
+
+.topic3 {
+  background-image: url(./assets/mindfulness.jpg);
+}
+
+.topic4 {
+  background-image: url(./assets/deep-breathing.jpg);
+}
+
+.topic5 {
+  background-image: url(./assets/guided-meditation.jpg);
+}
+
+.topic6 {
+  background-image: url(./assets/mantra-meditation.jpg);
+}
+
+.topic7 {
+  background-image: url(./assets/body-scan-meditation.jpg);
+}
+
+.topic8 {
+  background-image: url(./assets/breath-meditation.jpg);
+}
+
+.topic9 {
+  background-image: url(./assets/progressive-muscle-relaxation.jpg);
+}
+
+.topic10 {
+  background-image: url(./assets/yoga.jpg);
+}
+
+.topic11 {
+  background-image: url(./assets/improved-memory.jpg);
+}
+
+.topic12 {
+  background-image: url(./assets/increased-attention.jpg);
+}
+
+.topic13 {
+  background-image: url(./assets/better-sleep.jpg);
+}
+
+.topic14 {
+  background-image: url(./assets/less-pain.jpg);
+}
+
+.topic15 {
+  background-image: url(./assets/lower-blood-pressure.jpg);
+}
+
+.topic16 {
+  background-image: url(./assets/less-anxiety.jpg);
+}
+
+.topic17 {
+  background-image: url(./assets/less-depression.jpg);
+}
+
+.topic18 {
+  background-image: url(./assets/greater-compassion.jpg);
+}
+
+

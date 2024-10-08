@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Colorful Signup/Login UI</title>
+</head>
+<body>
+    <video src="./assets/Buddha_screensaver___Gautam_buddha_background_video_no_copyright___Devotional_background_video(1080p60).mp4"  muted autoplay loop>
+            </video>
+    <div class="container">
+        <div class="tab">
+            <button class="tablink active" aria-label="Login" onclick="openTab(event, 'Login')">Login</button>
+            <button class="tablink" aria-label="Signup" onclick="openTab(event, 'Signup')">Signup</button>
+        </div>
+
+        <div id="Login" class="tabcontent active">
+            <h2>Login</h2>
+            <form onsubmit="Login(event)">
+                <input type="email" id="email1" placeholder="Email" autocomplete="on" required>
+                <input type="password" id="password1" placeholder="Password" autocomplete="on" required>
+                <button type="submit" id="login">Login</button>
+            </form>
+        </div>
+
+        <div id="Signup" class="tabcontent">
+            <h2>Signup</h2>
+            <form onsubmit="Signup(event)">
+                <input type="text" id="name" placeholder="Username" autocomplete="on" required>
+                <input type="email" id="email"  placeholder="Email" autocomplete="on" required>
+                <input type="password"  id="password" placeholder="Password" autocomplete="on" required>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+    </div>
+    <div class="getstarted">
+        <div class="med">
+            <p>Silent Moon</p>
+            <h1>Hi <span id="usernameDisplay">Username</span>, Welcome to Silent Moon</h1>
+            <p>Explore the app, Find some peace of mind to prepare for meditation</p>
+            <button >GET STARTED</button>
+        </div>
+    </div> 
+    <div class="choose_topic">
+        <h1>What Brings you to silent Moon?</h1>
+        <p>Choose a topic to focus on:</p>
+        <ul>
+            <li class="topic topic1">Reduce stress</li>
+            <li class="topic topic2">Reduce anxiety</li>
+            <li class="topic topic3">Mindfulness</li>
+            <li class="topic topic4">Deep breathing</li>
+            <li class="topic topic5">Guided meditation</li>
+            <li class="topic topic6">Mantra meditation</li>
+            <li class="topic topic7">Body scan meditation</li>
+            <li class="topic topic8">Breath meditation</li>
+            <li class="topic topic9">Progressive muscle relaxation</li>
+            <li class="topic topic10">Yoga</li>
+            <li class="topic topic11">Improved memory</li>
+            <li class="topic topic12">Increased attention</li>
+            <li class="topic topic13">Better sleep</li>
+            <li class="topic topic14">Less pain</li>
+            <li class="topic topic15">Lower blood pressure</li>
+            <li class="topic topic16">Less anxiety</li>
+            <li class="topic topic17">Less depression</li>
+            <li class="topic topic18">Greater compassion</li>
+        </ul>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
