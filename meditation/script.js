@@ -106,18 +106,17 @@ saveTimeButton.addEventListener('click', (e) => {
 });
 
 
-// Get all topic elements
-const topics = document.querySelectorAll(".topic");
+const topic1=document.querySelector('.topic1');
+topic1.addEventListener("click",(event)=>{
+ const choose_topic=document.querySelector('.choose_topic');
+ choose_topic.style.display="none";
+ const what_time=document.querySelector('.what_time');
+ what_time.style.display="block";
+ 
 
-// Add event listener to each topic element
-topics.forEach((topic) => {
-  topic.addEventListener("click", (event) => {
-    // Hide the choose topic element
-    const chooseTopicElement = document.querySelector(".choose_topic");
-    chooseTopicElement.style.display = "none";
 
-    // Show the what time element
-    const whatTimeElement = document.querySelector(".what_time");
-    whatTimeElement.style.display = "block";
-  });
-});
+
+
+
+
+})
