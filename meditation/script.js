@@ -106,14 +106,17 @@ saveTimeButton.addEventListener('click', (e) => {
 });
 
 
-let topic=document.querySelector('.topic');
+let topic=document.querySelector('.topic1');
 topic.addEventListener("click",(event)=>{
   event.preventDefault();
   const time=document.querySelector('.what_time');
   time.style.display="block";
   const getstartedpage = document.querySelector(".getstarted");
   getstartedpage.style.display = "none";
+  const choose_topic=document.querySelector('.choose_topic');
+  choose_topic.style.display="none";
   
+
 
 
 })
