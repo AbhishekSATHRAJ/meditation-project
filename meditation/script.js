@@ -107,11 +107,10 @@ saveTimeButton.addEventListener('click', (e) => {
 
 
 // Get all topic elements
-const topics = document.querySelectorAll(".topic");
-const topicArray = Array.prototype.slice.call(topics);
+const topic1 = document.querySelector(".topic1");
 
 // Add event listener to each topic element
-topics.forEach((topic) => {
+topic1.forEach((topic) => {
   topic.addEventListener("click", (event) => {
     // Hide the choose topic element
     const chooseTopicElement = document.querySelector(".choose_topic");
@@ -120,21 +119,21 @@ topics.forEach((topic) => {
     // Show the what time element
     const whatTimeElement = document.querySelector(".what_time");
     whatTimeElement.style.display = "block";
-
-    // Get the selected topic text
-    const topicText = topic.textContent;
-
-    // Display the selected topic text
-    const timeElement = document.querySelector(".what_time h1");
-    timeElement.textContent = `You have selected: ${topicText}`;
   });
 });
 
-// Function to select a random topic
-function selectRandomTopic() {
-  const randomTopic = topicArray[Math.floor(Math.random() * topicArray.length)];
-  randomTopic.click();
-}
+// Get all topic elements
+const topic2 = document.querySelector(".topic2");
 
-// Select a random topic on page load
-selectRandomTopic();
+// Add event listener to each topic element
+topic2.forEach((topic) => {
+  topic.addEventListener("click", (event) => {
+    // Hide the choose topic element
+    const chooseTopicElement = document.querySelector(".choose_topic");
+    chooseTopicElement.style.display = "none";
+
+    // Show the what time element
+    const whatTimeElement = document.querySelector(".what_time");
+    whatTimeElement.style.display = "block";
+  });
+});
