@@ -234,3 +234,78 @@ h1 {
 }
 
 
+/* times setting */
+.what_time {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.what_time h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.what_time p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.what_time label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.what_time input[type="time"] {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.what_time #time-display {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.what_time button {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.what_time button:hover {
+  background-color: #3e8e41;
+}
+
+.what_time #save-time {
+  background-color: #03A9F4;
+}
+
+.what_time #save-time:hover {
+  background-color: #039BE5;
+}
+
+.days-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.days-buttons button {
+  margin: 10px;
+  width: calc(12% - 20px);
+}

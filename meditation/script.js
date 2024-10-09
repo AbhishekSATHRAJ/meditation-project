@@ -85,3 +85,35 @@ function Get_started(event){
     choose_topic.style.display="block";
 
 }
+
+// What time function
+
+const meditationTimeInput = document.getElementById('meditation-time');
+const timeDisplay = document.getElementById('time-display');
+const saveTimeButton = document.getElementById('save-time');
+
+meditationTimeInput.addEventListener('change', (e) => {
+    const selectedTime = meditationTimeInput.value;
+    const formattedTime = moment(selectedTime, 'HH:mm:ss').format('h:mm:ss A');
+    timeDisplay.textContent = formattedTime;
+});
+
+saveTimeButton.addEventListener('click', (e) => {
+    const selectedTime = meditationTimeInput.value;
+    const formattedTime = moment(selectedTime, 'HH:mm:ss').format('h:mm:ss A');
+    localStorage.setItem('meditationTime', formattedTime);
+    alert('Time saved!');
+});
+
+
+let topic=document.querySelector('.topic');
+let topicArray=["Meditation","Yoga","Breathing","Guided Imagery"];
+let topicIndex=0;
+// topic change function
+function changeTopic() {
+  topicIndex = (topicIndex + 1) % topicArray.length;
+  topic.textContent = topicArray[topicIndex];
+  }
+  
+
+
