@@ -20,8 +20,10 @@ function Signup(event) {
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
-  let data = { username: name, mail: email, password: password };
-  let arr = JSON.parse(localStorage.getItem("userdetails")) || [];
+  let data = {username: name, mail: email, password: password};
+  // Check if userdetails already exists in local storage
+  let storedData = localStorage.getItem("userdetails") || "[]";
+  let arr = JSON.parse(storedData);
   let emails = arr.map((mail) => mail.mail);
   let names = arr.map((names) => names.name);
   let passwords = arr.map((passwords) => passwords.password);
