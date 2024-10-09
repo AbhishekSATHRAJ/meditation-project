@@ -107,13 +107,16 @@ saveTimeButton.addEventListener('click', (e) => {
 
 
 let topic=document.querySelector('.topic');
-let topicArray=["Meditation","Yoga","Breathing","Guided Imagery"];
-let topicIndex=0;
-// topic change function
-function changeTopic() {
-  topicIndex = (topicIndex + 1) % topicArray.length;
-  topic.textContent = topicArray[topicIndex];
-  }
+topic.addEventListener("click",(event)=>{
+  event.preventDefault();
+  const time=document.querySelector('.what_time');
+  time.style.display="block";
+  const getstartedpage = document.querySelector(".getstarted");
+  getstartedpage.style.display = "none";
   
+
+
+})
+
 
 
