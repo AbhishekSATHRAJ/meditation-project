@@ -106,20 +106,37 @@ saveTimeButton.addEventListener('click', (e) => {
 });
 
 
-let topic=document.querySelector('.topic1');
-topic.addEventListener("click",(event)=>{
-  event.preventDefault();
-  const time=document.querySelector('.what_time');
-  time.style.display="block";
-  const getstartedpage = document.querySelector(".getstarted");
-  getstartedpage.style.display = "none";
-  const choose_topic=document.querySelector('.choose_topic');
-  choose_topic.style.display="none";
-  
-
-
-
-})
+let topic = document.querySelector(".topic1");
+if (topic) {
+  console.log("Topic element found");
+  topic.addEventListener("click", (event) => {
+    console.log("Topic element clicked");
+    event.preventDefault();
+    const time = document.querySelector(".what_time");
+    if (time) {
+      console.log("Time element found");
+      time.style.display = time.style.display === "block" ? "block" : "block";
+    } else {
+      console.log("Time element not found");
+    }
+    const getstartedpage = document.querySelector(".getstarted");
+    if (getstartedpage) {
+      console.log("Get started page element found");
+      getstartedpage.style.display = "none";
+    } else {
+      console.log("Get started page element not found");
+    }
+    const choose_topic = document.querySelector(".choose_topic");
+    if (choose_topic) {
+      console.log("Choose topic element found");
+      choose_topic.style.display = "none";
+    } else {
+      console.log("Choose topic element not found");
+    }
+  });
+} else {
+  console.log("Topic element not found");
+}
 
 
 
