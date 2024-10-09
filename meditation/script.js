@@ -105,6 +105,7 @@ saveTimeButton.addEventListener('click', (e) => {
     alert('Time saved!');
 });
 
+// choose_topic  function && what time//
 
 const topic1=document.querySelector('.topic1');
 topic1.addEventListener("click",(event)=>{
@@ -112,11 +113,28 @@ topic1.addEventListener("click",(event)=>{
  choose_topic.style.display="none";
  const what_time=document.querySelector('.what_time');
  what_time.style.display="block";
- 
+})
 
+const topic2=document.querySelector('.topic2');
+topic2.addEventListener("click",(event)=>{
+ const choose_topic=document.querySelector('.choose_topic');
+ choose_topic.style.display="none";
+ const what_time=document.querySelector('.what_time');
+ what_time.style.display="block";
+})
 
+const topic3=document.querySelector('.topic3');
+topic3.addEventListener("click",(event)=>{
+ const choose_topic=document.querySelector('.choose_topic');
+ choose_topic.style.display="none";
+ const what_time=document.querySelector('.what_time');
+ what_time.style.display="block";
+})
 
-
-
-
+const topic4=document.querySelector('.topic4');
+topic4.addEventListener("click",(event)=>{
+ const choose_topic=document.querySelector('.choose_topic');
+ choose_topic.style.display="none";
+ const what_time=document.querySelector('.what_time');
+ what_time.style.display="block";
 })
