@@ -244,6 +244,7 @@ h1 {
   width: 80%;
   margin: 40px auto; 
   transition: background-color 0.3s;
+  display: none;
 }
 .what_time:hover {
   background-color: #fff; 
@@ -318,4 +319,73 @@ h1 {
 .days-buttons button {
   margin: 10px;
   width: calc(12% - 20px);
+}
+
+
+
+.start {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: none;
+}
+
+.start p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.start h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.basic, .relaxation {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.basic p, .relaxation p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+#basic-duration, #relaxation-duration {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-buttons button {
+  margin: 10px;
 }

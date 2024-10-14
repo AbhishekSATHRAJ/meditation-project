@@ -110,10 +110,56 @@ saveTimeButton.addEventListener('click', (e) => {
 const topics=document.querySelectorAll('#topic1,#topic2,#topic3,#topic4,#topic5,#topic6,#topic7,#topic8,#topic9,#topic10,#topic11,#topic12,#topic13,#topic14,#topic15,#topic16,#topic17,#topic18');
 topics.forEach(topic => {
   topic.addEventListener("click", (event) => {
+    event.preventDefault();
+    const topicname = event.target.id;
     const choose_topic = document.querySelector('.choose_topic');
     choose_topic.style.display = "none";
     const what_time = document.querySelector('.what_time');
     what_time.style.display = "block";
   });
+});
+
+let timerInterval;
+
+function startMeditation(course) {
+    const durationElement = course === 'Basic course' ? document.getElementById('basic-duration') : document.getElementById('relaxation-duration');
+    const durationText = durationElement.textContent.replace(' MIN', ''); // Remove the " MIN" part
+    const duration = durationText.split(':').map(Number);
+    let minutes = duration[0];
+    let seconds = duration[1];
+
+    timerInterval = setInterval(() => {
+        if (seconds === 0) {
+            if (minutes === 0) {
+                clearInterval(timerInterval);
+                alert(`Meditation session for ${course} has ended.`);
+            } else {
+                minutes--;
+                seconds = 59;
+            }
+        } else {
+            seconds--;
+        }
+
+        durationElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')} MIN`;
+    }, 1000);
+}
+
+
+
+
+document.getElementById('save-time').addEventListener('click', () => {
+  // Get the selected time and day
+  const selectedTime = document.getElementById('meditation-time').value;
+  const selectedDay = Array.from(document.querySelectorAll('.days-buttons button')).find(button => button.classList.contains('active')).textContent;
+
+  // Save the selected time and day (you can use localStorage or a database to store the data)
+  localStorage.setItem('selectedTime', selectedTime);
+  localStorage.setItem('selectedDay', selectedDay);
+
+  // Navigate to the "start" and "relaxation" pages
+  document.querySelector('.what_time').style.display = 'none';
+  document.querySelector('.start').style.display = 'block';
+  document.querySelector('.relaxation').style.display = 'block';
 });
 

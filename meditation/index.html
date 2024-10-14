@@ -87,7 +87,28 @@
             <button>NO THANKS</button>
         </form>
     </div>
-
+    <div class="start">
+        <p>Silent Moon</p>
+        <h1>Good morning, let's start your meditation journey</h1>
+        <div class="basic">
+            <p>Basic course</p>
+            <p id="basic-duration">10:00 MIN</p>
+            <button onclick="startMeditation('Basic course')">START</button>
+        </div>
+        <div class="relaxation">
+            <p>Relaxation Music</p>
+            <p id="relaxation-duration">15:00 MIN</p>
+            <button onclick="startMeditation('Relaxation Music')">START</button>
+        </div>
+        <p>Recommend for you</p>
+        <div class="nav-buttons">
+            <button onclick="navigate('Home')">Home</button>
+            <button onclick="navigate('Sleep')">Sleep</button>
+            <button onclick="navigate('Meditation')">Meditation</button>
+            <button onclick="navigate('Music')">Music</button>
+            <button onclick="navigate('Asfar')">Asfar</button>
+        </div>
+    </div>
 
 
     <script src="script.js"></script>
