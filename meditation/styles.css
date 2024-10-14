@@ -309,18 +309,3 @@ h1 {
   margin: 10px;
   width: calc(12% - 20px);
 }
-
-/* Navigation Bar Styles */
-
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-nav li {
-  margin-right
-}
