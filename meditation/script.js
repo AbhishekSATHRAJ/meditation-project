@@ -107,34 +107,60 @@ saveTimeButton.addEventListener('click', (e) => {
 
 // choose_topic  function && what time//
 
-const topic1=document.querySelector('#topic1');
-topic1.addEventListener("click",(event)=>{
- const choose_topic=document.querySelector('.choose_topic');
- choose_topic.style.display="none";
- const what_time=document.querySelector('.what_time');
- what_time.style.display="block";
-})
+const topics=document.querySelectorAll('#topic1,#topic2,#topic3,#topic4,#topic5,#topic6,#topic7,#topic8,#topic9,#topic10,#topic11,#topic12,#topic13,#topic14,#topic15,#topic16,#topic17,#topic18');
+topics.forEach(topic => {
+  topic.addEventListener("click", (event) => {
+    const choose_topic = document.querySelector('.choose_topic');
+    choose_topic.style.display = "none";
+    const what_time = document.querySelector('.what_time');
+    what_time.style.display = "block";
+  });
+});
 
-const topic2=document.querySelector('#topic2');
-topic2.addEventListener("click",(event)=>{
- const choose_topic=document.querySelector('.choose_topic');
- choose_topic.style.display="none";
- const what_time=document.querySelector('.what_time');
- what_time.style.display="block";
-})
+// const topic2=document.querySelector('#topic2');
+// topic2.addEventListener("click",(event)=>{
+//  const choose_topic=document.querySelector('.choose_topic');
+//  choose_topic.style.display="none";
+//  const what_time=document.querySelector('.what_time');
+//  what_time.style.display="block";
+// })
 
-const topic3=document.querySelector('#topic3');
-topic3.addEventListener("click",(event)=>{
- const choose_topic=document.querySelector('.choose_topic');
- choose_topic.style.display="none";
- const what_time=document.querySelector('.what_time');
- what_time.style.display="block";
-})
+// const topic3=document.querySelector('#topic3');
+// topic3.addEventListener("click",(event)=>{
+//  const choose_topic=document.querySelector('.choose_topic');
+//  choose_topic.style.display="none";
+//  const what_time=document.querySelector('.what_time');
+//  what_time.style.display="block";
+// })
 
-const topic4=document.querySelector('#topic4');
-topic4.addEventListener("click",(event)=>{
- const choose_topic=document.querySelector('.choose_topic');
- choose_topic.style.display="none";
- const what_time=document.querySelector('.what_time');
- what_time.style.display="block";
-})
+// const topic4=document.querySelector('#topic4');
+// topic4.addEventListener("click",(event)=>{
+//  const choose_topic=document.querySelector('.choose_topic');
+//  choose_topic.style.display="none";
+//  const what_time=document.querySelector('.what_time');
+//  what_time.style.display="block";
+// })
+
+// const topic5=document.querySelector('#topic5');
+// topic5.addEventListener("click",(event)=>{
+//  const choose_topic=document.querySelector('.choose_topic');
+//  choose_topic.style.display="none";
+//  const what_time=document.querySelector('.what_time');
+//  what_time.style.display="block";
+// })
+
+// const topic6=document.querySelector('#topic6');
+// topic6.addEventListener("click",(event)=>{
+//  const choose_topic=document.querySelector('.choose_topic');
+//  choose_topic.style.display="none";
+//  const what_time=document.querySelector('.what_time');
+//  what_time.style.display="block";
+// })
+
+// const topic7=document.querySelector('#topic7');
+// topic7.addEventListener("click",(event)=>{
+//  const choose_topic=document.querySelector('.choose_topic');
+//  choose_topic.style.display="none";
+//  const what_time=document.querySelector('.what_time');
+//  what_time.style.display="block";
+// })
