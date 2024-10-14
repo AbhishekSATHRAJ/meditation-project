@@ -241,7 +241,13 @@ h1 {
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: none;
+  width: 80%;
+  margin: 40px auto; 
+  transition: background-color 0.3s;
+}
+.what_time:hover {
+  background-color: #fff; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .what_time h1 {
@@ -267,6 +273,10 @@ h1 {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+.what_time input[type="time"]:focus {
+  border-color: #ff69b4; 
+  outline: none;
 }
 
 .what_time #time-display {
