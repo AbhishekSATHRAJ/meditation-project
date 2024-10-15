@@ -147,19 +147,14 @@ function startMeditation(course) {
 
 
 
+function save(event){
+  event.preventDefault();
+  const topicname = event.target.id;
+  const   what_time = document.querySelector('.what_time');
+  what_time.style.display="none";
+  const start=document.querySelector('.start');
+  start.style.display="block";
+  startMeditation(topicname);
+  }
 
-document.getElementById('save-time').addEventListener('click', () => {
-  // Get the selected time and day
-  const selectedTime = document.getElementById('meditation-time').value;
-  const selectedDay = Array.from(document.querySelectorAll('.days-buttons button')).find(button => button.classList.contains('active')).textContent;
-
-  // Save the selected time and day (you can use localStorage or a database to store the data)
-  localStorage.setItem('selectedTime', selectedTime);
-  localStorage.setItem('selectedDay', selectedDay);
-
-  // Navigate to the "start" and "relaxation" pages
-  document.querySelector('.what_time').style.display = 'none';
-  document.querySelector('.start').style.display = 'block';
-  document.querySelector('.relaxation').style.display = 'block';
-});
 

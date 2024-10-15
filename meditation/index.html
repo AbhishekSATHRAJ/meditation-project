@@ -69,7 +69,7 @@
     <div class="what_time">
         <h1>What time would you like to meditate?</h1>
         <p>Any time you can choose but We recommend first thing in the morning</p>
-        <form>
+        <form onsubmit="save(event)">
             <label for="meditation-time">Select a time:</label>
             <input type="time" id="meditation-time" name="meditation-time" value="07:00:00" step="1">
             <span id="time-display"></span>
