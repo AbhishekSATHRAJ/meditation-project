@@ -52,8 +52,10 @@ function Login(event) {
 
   if (emails.includes(email1) && passwords.includes(password1)) {
     alert("Login Successfull");
-    const getstartedpage = document.querySelector(".getstarted");
-    getstartedpage.style.display = "block";
+    const nav_bar=document.querySelector('.nav-bar');
+    nav_bar.style.display='block';
+    const home=document.querySelector('.home');
+    home.style.display='block';
     const contianer = document.querySelector(".container");
     contianer.style.display = "none";
 
@@ -65,96 +67,46 @@ function Login(event) {
     alert("Invalid Email or Password");
   }
 }
-// Update the username display
-function user_name() {
-  let name = document.getElementById("name").value;
-  let arr = JSON.parse(localStorage.getItem("userdetails")) || [];
-  let user_name = arr.map((user) => user.name);
-  if (user_name.includes(name)) {
-    document.getElementById("usernameDisplay").innerHTML = `${name}`;
+// finished data storage //
+document.addEventListener('DOMContentLoaded', () => {
+  const musicLink = document.querySelectorAll('.nav-link')[1]; // Target the second nav link
+
+  if (musicLink) {
+    musicLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      document.querySelector('.home').style.display = 'none'; // Hide the home content
+
+      const musicContent = document.querySelector('.music'); // Select the music content
+      if (musicContent) {
+        musicContent.style.display = 'block'; // Show the music content
+      } else {
+        console.error('Music content not found.');
+      }
+    });
   } else {
-    document.getElementById("usernameDisplay").innerHTML = "";
+    console.error('The second <a> element was not found.');
   }
-}
-// get started function //
-function Get_started(event){
-    event.preventDefault();
-    const getstartedpage = document.querySelector(".getstarted");
-    getstartedpage.style.display = "none";
-    const choose_topic=document.querySelector('.choose_topic');
-    choose_topic.style.display="block";
-
-}
-
-// What time function
-
-const meditationTimeInput = document.getElementById('meditation-time');
-const timeDisplay = document.getElementById('time-display');
-const saveTimeButton = document.getElementById('save-time');
-
-meditationTimeInput.addEventListener('change', (e) => {
-    const selectedTime = meditationTimeInput.value;
-    const formattedTime = moment(selectedTime, 'HH:mm:ss').format('h:mm:ss A');
-    timeDisplay.textContent = formattedTime;
 });
 
-saveTimeButton.addEventListener('click', (e) => {
-    const selectedTime = meditationTimeInput.value;
-    const formattedTime = moment(selectedTime, 'HH:mm:ss').format('h:mm:ss A');
-    localStorage.setItem('meditationTime', formattedTime);
-    alert('Time saved!');
-});
-
-// choose_topic  function && what time//
-
-const topics=document.querySelectorAll('#topic1,#topic2,#topic3,#topic4,#topic5,#topic6,#topic7,#topic8,#topic9,#topic10,#topic11,#topic12,#topic13,#topic14,#topic15,#topic16,#topic17,#topic18');
-topics.forEach(topic => {
-  topic.addEventListener("click", (event) => {
-    event.preventDefault();
-    const topicname = event.target.id;
-    const choose_topic = document.querySelector('.choose_topic');
-    choose_topic.style.display = "none";
-    const what_time = document.querySelector('.what_time');
-    what_time.style.display = "block";
-  });
-});
-
-let timerInterval;
-
-function startMeditation(course) {
-    const durationElement = course === 'Basic course' ? document.getElementById('basic-duration') : document.getElementById('relaxation-duration');
-    const durationText = durationElement.textContent.replace(' MIN', ''); // Remove the " MIN" part
-    const duration = durationText.split(':').map(Number);
-    let minutes = duration[0];
-    let seconds = duration[1];
-
-    timerInterval = setInterval(() => {
-        if (seconds === 0) {
-            if (minutes === 0) {
-                clearInterval(timerInterval);
-                alert(`Meditation session for ${course} has ended.`);
-            } else {
-                minutes--;
-                seconds = 59;
-            }
-        } else {
-            seconds--;
-        }
-
-        durationElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')} MIN`;
-    }, 1000);
-}
 
 
 
-function save(event){
-  event.preventDefault();
-  const topicname = event.target.id;
-  const   what_time = document.querySelector('.what_time');
-  what_time.style.display="none";
-  const start=document.querySelector('.start');
-  start.style.display="block";
-  startMeditation(topicname);
-  }
+  
 
+
+
+
+let preloadInterval;
+
+// Start the preloader animation
+preloadInterval = setInterval(() => {
+  // Toggle the preloader animation classes
+  document.querySelector('.preload').classList.toggle('preload-finish');
+}, 5000); // 5000ms = 5 seconds
+
+// Stop the preloader animation after a certain time
+setTimeout(() => {
+  clearInterval(preloadInterval);
+  document.querySelector('.preload').classList.add('preload-finish');
+}, 15000); // 15000ms = 15 seconds
 
