@@ -52,10 +52,8 @@ function Login(event) {
 
   if (emails.includes(email1) && passwords.includes(password1)) {
     alert("Login Successfull");
-    const nav_bar=document.querySelector('.nav-bar');
-    nav_bar.style.display='block';
-    const home=document.querySelector('.home');
-    home.style.display='block';
+    const front_body=document.querySelector('#front_body');
+    front_body.style.display='block';
     const contianer = document.querySelector(".container");
     contianer.style.display = "none";
 
@@ -68,36 +66,8 @@ function Login(event) {
   }
 }
 // finished data storage //
-document.addEventListener('DOMContentLoaded', () => {
-  const musicLink = document.querySelectorAll('.nav-link')[1]; // Target the second nav link
-
-  if (musicLink) {
-    musicLink.addEventListener('click', function(event) {
-      event.preventDefault();
-      document.querySelector('.home').style.display = 'none'; // Hide the home content
-
-      const musicContent = document.querySelector('.music'); // Select the music content
-      if (musicContent) {
-        musicContent.style.display = 'block'; // Show the music content
-      } else {
-        console.error('Music content not found.');
-      }
-    });
-  } else {
-    console.error('The second <a> element was not found.');
-  }
-});
-
-
-
-
-  
-
-
-
 
 let preloadInterval;
-
 // Start the preloader animation
 preloadInterval = setInterval(() => {
   // Toggle the preloader animation classes
@@ -110,3 +80,18 @@ setTimeout(() => {
   document.querySelector('.preload').classList.add('preload-finish');
 }, 15000); // 15000ms = 15 seconds
 
+// home
+// Select elements with class 'nav-link'
+const navLink = document.querySelector('.nav-link');
+
+// Check if navLink is not empty
+if (navLink.length > 0) {
+  // Add event listener to the first element
+  navLink[0].addEventListener("click", (e) => {
+    e.preventDefault();
+    const frontBody = document.querySelector('.home');
+    frontBody.style.display = 'block';
+    const container = document.querySelector(".container");
+    container.style.display = "none";
+  });
+}
