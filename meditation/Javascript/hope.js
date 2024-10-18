@@ -55,8 +55,8 @@ let chatareaouter = document.querySelector(".chatarea-outer");
 var startAudio = new Audio();
 var endAudio = new Audio();
 
-startAudio.src = "./sounds/start_speech.ogg";
-endAudio.src = "./sounds/end_speech.ogg";
+startAudio.src = "../assets/music/sounds/start_speech.ogg";
+endAudio.src = "../assets/music/sounds/end_speech.ogg";
 
 const name = localStorage.getItem("name") || "my friend";
 
