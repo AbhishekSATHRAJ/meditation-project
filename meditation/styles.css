@@ -29,57 +29,58 @@ video {
   background-repeat: no-repeat;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  padding: 2rem;
   width: 90%;
+  margin: auto;
   max-width: 400px;
 }
 
 /* Styles for tablets and smaller devices */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   video {
-    width: 100%; /* Make video full-width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
   }
 
   .container {
-    padding: 1.5rem; /* Reduce padding */
+    padding: 1.5rem; 
   }
 
   .tab {
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: stretch; /* Stretch buttons to full width */
+    flex-direction: column; 
+    align-items: stretch; 
   }
 
   .tablink {
-    width: 100%; /* Make buttons full-width */
-    margin-bottom: 1rem; /* Add space between buttons */
+    width: 100%; 
+    margin-bottom: 1rem;
   }
-}
+} */
 
 /* Styles for mobile devices */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   video {
-    height: 200px; /* Set a fixed height for mobile */
-    object-fit: cover; /* Cover the area */
+    height: 200px; 
+    object-fit: cover; 
   }
 
   .container {
-    padding: 1rem; /* Further reduce padding */
+    padding: 1rem; 
   }
 
   .tabcontent {
-    font-size: 0.9rem; /* Slightly reduce font size */
+    font-size: 0.9rem; 
   }
 
   input {
-    width: 100%; /* Make input fields full-width */
-    margin-bottom: 1rem; /* Add space between input fields */
+    width: 100%; 
+    margin-bottom: 1rem;
   }
 
   button {
-    width: 100%; /* Make buttons full-width */
+    width: 100%; 
   }
-}
+} */
 
 .tab {
   display: flex;
@@ -2254,12 +2255,14 @@ a {
     display: none;
   }
   .mobile-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 5px 0;
-  }
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Vertically centers items */
+    justify-content: center; /* Horizontally centers items */
+    width: 100%; /* Full width */
+    height: 50px; /* Adjusted height for medium size */
+    padding: 10px 0; /* Increased padding for better spacing */
+    font-size: 16px; /* Example font size for medium text */
+}
   .mobile-b-nav {
     position: fixed;
     bottom: 0;
