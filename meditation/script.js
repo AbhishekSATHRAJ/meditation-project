@@ -57,10 +57,10 @@ function Login(event) {
     const contianer = document.querySelector(".container");
     contianer.style.display = "none";
 
-    const audio1 = new Audio(
-      "./assets/audio/WhatsApp Audio 2024-10-07 at 22.09.39_8ee27a3d.mp3"
-    );
-    audio1.play();
+    // const audio1 = new Audio(
+    //   "./assets/audio/WhatsApp Audio 2024-10-07 at 22.09.39_8ee27a3d.mp3"
+    // );
+    // audio1.play();
   } else {
     alert("Invalid Email or Password");
   }
