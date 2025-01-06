@@ -14,6 +14,15 @@ function openTab(evt, tabName) {
   evt.currentTarget.classList.add("active");
 }
 
+// Guest login functionality
+function guestLogin() {
+  alert('Logged in as Guest!');
+  const contianer = document.querySelector(".container");
+  contianer.style.display = "none";
+  const front_body=document.querySelector('#front_body');
+  front_body.style.display='block';// Update this with the actual dashboard URL
+}
+
 // data storage  signup //
 function Signup(event) {
     event.preventDefault();
