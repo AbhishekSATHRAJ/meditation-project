@@ -1086,6 +1086,18 @@ a {
   height: 100%;
   color: var(--light);
 }
+.hide-background {
+  display: none;
+}
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2; 
+}
 
 #scene-body::before {
   content: "";
@@ -1113,6 +1125,7 @@ a {
   align-items: center;
   justify-content: center;
   margin: 0 2rem;
+
 }
 .scene-title {
   margin: 2rem 5rem;
@@ -1196,8 +1209,9 @@ a {
 .ice-content {
   background-color: #fbbd08;
   position: relative;
+  display: none;
   place-items: center;
-  z-index:999;
+  z-index:10;
   opacity: 0;
   pointer-events: none;
   transition: opacity 300ms ease-in-out;
@@ -1208,6 +1222,7 @@ a {
 .fall-content.active-show-fall,
 .snow-content.active-show-snow,
 .ice-content.active-show-ice {
+  display: grid;
   opacity: 1;
   pointer-events: all;
 }
@@ -1220,9 +1235,11 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
+  z-index: -1;
+  background: url("fallback.jpg") no-repeat center center;
 }
 .time-select,
 .time-select-ocean,
@@ -1234,10 +1251,10 @@ a {
   bottom: 7%;
   left: 7%;
   display: flex;
-  z-index: 999;
+  z-index: 15;
   align-items: center;
-  transform: translateX(-50%);
-  transition: all 500ms ease-in-out 250ms;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
   opacity: 0;
 }
 .sunset-content.active-show .time-select,
@@ -1246,7 +1263,7 @@ a {
 .fall-content.active-show-fall .time-select-fall,
 .snow-content.active-show-snow .time-select-snow,
 .ice-content.active-show-ice .time-select-ice {
-  transform: translateX(0);
+  transform: translateY(0);
   transition: all 500ms ease-in-out 250ms;
   opacity: 1;
 }
@@ -1293,7 +1310,7 @@ a {
 .exit-video-snow,
 .exit-video-ice {
   position: fixed;
-  z-index: 999;
+  z-index: 20;
   right: 2rem;
   top: 2rem;
   cursor: pointer;

@@ -256,17 +256,20 @@ const playBtnRain = document.querySelector(".pause-video-rain");
 let fakeDurationRain = 600;
 
 // play
+const sceneBackground = document.querySelector(".scene-background");
 const videoPlayingRain = (videoAudioRain) => {
   if (videoAudioRain.paused) {
     videoRain.play();
     videoAudioRain.play();
     selectContainerRain.querySelector("i.fas").classList.remove("fa-play");
     selectContainerRain.querySelector("i.fas").classList.add("fa-pause");
+    sceneBackground.classList.add("hide-background");
   } else {
     videoRain.pause();
     videoAudioRain.pause();
     selectContainerRain.querySelector("i.fas").classList.add("fa-play");
     selectContainerRain.querySelector("i.fas").classList.remove("fa-pause");
+    sceneBackground.classList.remove("hide-background");
   }
 };
 
