@@ -20,7 +20,7 @@ function guestLogin() {
   const contianer = document.querySelector(".container");
   contianer.style.display = "none";
   const front_body=document.querySelector('#front_body');
-  front_body.style.display='block';// Update this with the actual dashboard URL
+  front_body.style.display='block';
 }
 
 // data storage  signup //
@@ -30,7 +30,6 @@ function Signup(event) {
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
   let data = {username: name, mail: email, password: password};
-  // Check if userdetails already exists in local storage
   let storedData = localStorage.getItem("userdetails") || "[]";
   let arr = JSON.parse(storedData);
   let emails = arr.map((mail) => mail.mail);
@@ -66,10 +65,6 @@ function Login(event) {
     const contianer = document.querySelector(".container");
     contianer.style.display = "none";
 
-    // const audio1 = new Audio(
-    //   "./assets/audio/WhatsApp Audio 2024-10-07 at 22.09.39_8ee27a3d.mp3"
-    // );
-    // audio1.play();
   } else {
     alert("Invalid Email or Password");
   }
@@ -77,25 +72,23 @@ function Login(event) {
 // finished data storage //
 
 let preloadInterval;
-// Start the preloader animation
-preloadInterval = setInterval(() => {
-  // Toggle the preloader animation classes
-  document.querySelector('.preload').classList.toggle('preload-finish');
-}, 5000); // 5000ms = 5 seconds
 
-// Stop the preloader animation after a certain time
+preloadInterval = setInterval(() => {
+
+  document.querySelector('.preload').classList.toggle('preload-finish');
+}, 5000); 
+
+
 setTimeout(() => {
   clearInterval(preloadInterval);
   document.querySelector('.preload').classList.add('preload-finish');
-}, 15000); // 15000ms = 15 seconds
+}, 15000); 
 
-// home
-// Select elements with class 'nav-link'
+
 const navLink = document.querySelector('.nav-link');
 
-// Check if navLink is not empty
+
 if (navLink.length > 0) {
-  // Add event listener to the first element
   navLink[0].addEventListener("click", (e) => {
     e.preventDefault();
     const frontBody = document.querySelector('.home');
@@ -107,7 +100,7 @@ if (navLink.length > 0) {
 
 
 
-// extra
+
 
 // loader
 window.addEventListener("load", () => {
@@ -156,7 +149,7 @@ function activeLink() {
   this.classList.add("mobile-b-active");
 }
 BmobileLink.forEach((l) => l.addEventListener("click", activeLink));
-// greetings
+
 const greeting = document.getElementById("greeting");
 
 function setGreeting() {
@@ -164,19 +157,18 @@ function setGreeting() {
     hour = today.getHours();
 
   if (hour < 12) {
-    // morning
     greeting.textContent = "Good morning, ";
   } else if (hour < 18) {
-    // afternoon
+
     greeting.textContent = "Good afternoon, ";
   } else {
-    // evening
+  
     greeting.textContent = "Good evening, ";
   }
 }
 setGreeting();
 
-// getname
+
 const name = document.getElementById("name");
 
 function getName() {
@@ -191,7 +183,7 @@ function getName() {
 
 function setName(e) {
   if (e.type === "keypress") {
-    // make sure enter is pressed
+   
     if (e.which == 13 || e.keyCode == 13) {
       localStorage.setItem("name", e.target.innerText);
       name.blur();

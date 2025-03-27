@@ -17,8 +17,8 @@ video {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   opacity: 0.6;
   z-index: -1;
@@ -35,6 +35,7 @@ video {
   width: 90%;
   margin: auto;
   max-width: 400px;
+  margin-top: 4rem;
 }
 
 /* Tablet and Mobile Styles */
@@ -42,10 +43,43 @@ video {
   video {
     width: 100%;
     height: auto;
+    min-height: 100vh;
+  }
+  .header {
+    padding: 10px 20px;
+    height: 3.5rem; 
   }
 
-  .container {
+  .mobile-logo img {
+    width: 120px; 
+    height: auto;
+  }
+  .modal-container-mobile {
+    padding-top: 210px; 
+}
+
+  .mobile-nav {
+    display: block; 
+  }
+
+  .start-relax {
+    position: relative; 
+    right: auto; 
+    bottom: auto;
+    width: 80%; 
+    max-width: 250px; 
+    margin: 1rem auto; 
+    padding: 0.5rem 2rem; 
+    text-align: center;
+    transform: scale(1); 
+    animation: none; 
+  }
+
+ 
+  .container,
+  .content{
     padding: 1.5rem;
+    margin-top: 3.5rem;
   }
 
   .tab {
@@ -57,16 +91,60 @@ video {
     width: 100%;
     margin-bottom: 1rem;
   }
+  .preload {
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+  }
+
+  .text-loader {
+    font-size: 20px;
+    padding: 15px;
+    margin: 20px;
+  }
+
+  .preload > span {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 4rem 0.4rem;
+  }
 }
 
 @media (max-width: 480px) {
   video {
-    height: 200px;
-    object-fit: cover;
+    width: auto;
+    height: 100vh;
+    min-width: 100vw;
+  }
+  .header {
+    padding: 10px 15px; 
+    height: 3rem; 
   }
 
-  .container {
-    padding: 1rem;
+  .mobile-logo img {
+    width: 100px; 
+    height: auto;
+  }
+
+  .start-relax {
+    position: relative; 
+    right: auto; 
+    bottom: auto;
+    width: 80%; 
+    max-width: 250px; 
+    margin: 1rem auto; 
+    padding: 0.5rem 2rem; 
+    text-align: center;
+    transform: scale(1); 
+    animation: none; 
+  }
+
+  
+
+  .container,
+  .content{
+    padding: 1.5rem;
+    margin-top: 3rem;
   }
 
   .tabcontent {
@@ -80,6 +158,22 @@ video {
 
   button {
     width: 100%;
+  }
+  .preload {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .text-loader {
+    font-size: 18px;
+    padding: 10px;
+    margin: 15px;
+  }
+
+  .preload > span {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin: 3rem 0.3rem;
   }
 }
 
@@ -595,13 +689,13 @@ a {
 
 /* -------------------- Header Styles -------------------- */
 .header {
-  z-index: 999;
+  z-index:1000;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 10px 100px;
-  height: 3rem;
+  height: 4rem;
   display: flex;
   background: linear-gradient(240deg, rgba(59, 190, 236, 1) 10%, rgba(52, 120, 221, 1) 100%);
   backdrop-filter: blur(0.5rem);
